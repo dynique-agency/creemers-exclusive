@@ -50,7 +50,7 @@ export const translations = {
     aboutStoryTitle: 'Mijn verhaal',
     aboutStory1: 'Ik ben **Tom Creemers** en ik heb één passie: **gastvrijheid die raakt**. Niet de standaard service, maar die momenten waarop gasten voelen dat alles precies klopt.',
     aboutStory2: '**Bijna de helft van mijn leven** verzorg ik verschillende horeca diensten. Van sommelier in kleine restaurants tot aanspreekpunt op grote evenementen. Ik heb geleerd dat het draait om **anticiperen op hetgeen gasten nodig hebben**, voordat ze het zelf weten.',
-    aboutStory3: 'Mijn achtergrond? **Nederlandse grondigheid** gecombineerd met **internationale ervaring**. Vier talen, jarenlange ervaring, en vooral: **oog voor detail** waar anderen overheen kijken.',
+    aboutStory3: 'Mijn achtergrond? **Hoogstaande Nederlandse professionaliteit** gecombineerd met **internationale ervaring**. Vier talen, jarenlange ervaring, en vooral: **oog voor detail** waar anderen overheen kijken.',
     aboutNetwork: 'Ik werk met een **klein, betrouwbaar netwerk** van professionals. Mensen die net als ik geloven in **kwaliteit boven kwantiteit**. Samen zorgen we ervoor dat elk project **naadloos verloopt**.',
     aboutCollaboration: 'Of het nu een **familiebijeenkomst** is of een **zakelijk evenement**, ik zorg ervoor dat alles **perfect geregeld** is. Van de eerste planning tot de laatste glazen die worden afgeruimd.',
     
@@ -144,7 +144,7 @@ export const translations = {
     aboutStoryTitle: 'My story',
     aboutStory1: 'I am **Tom Creemers** and I have one passion: **hospitality that touches**. Not standard service, but those moments when guests feel that everything is just right.',
     aboutStory2: '**Nearly half my life** I have provided various hospitality services. From sommelier in small restaurants to point of contact at large events. I have learned that it\'s about **anticipating what guests need**, before they know it themselves.',
-    aboutStory3: 'My background? **Dutch thoroughness** combined with **international experience**. Four languages, years of experience, and above all: **attention to detail** that others overlook.',
+    aboutStory3: 'My background? **High-level Dutch professionalism** combined with **international experience**. Four languages, years of experience, and above all: **attention to detail** that others overlook.',
     aboutNetwork: 'I work with a **small, reliable network** of professionals. People who, like me, believe in **quality over quantity**. Together we ensure that every project **runs seamlessly**.',
     aboutCollaboration: 'Whether it\'s a **family gathering** or a **business event**, I make sure everything is **perfectly organized**. From the first planning to the last glasses being cleared away.',
     
@@ -238,7 +238,7 @@ export const translations = {
     aboutStoryTitle: 'Meine Geschichte',
     aboutStory1: 'Ich bin **Tom Creemers** und ich habe eine Leidenschaft: **Gastfreundschaft, die berührt**. Nicht Standard-Service, sondern diese Momente, in denen Gäste spüren, dass alles stimmt.',
     aboutStory2: '**Fast die Hälfte meines Lebens** biete ich verschiedene Gastronomiedienstleistungen an. Vom Sommelier in kleinen Restaurants bis zum Ansprechpartner bei großen Events. Ich habe gelernt, dass es darum geht, **zu antizipieren, was Gäste brauchen**, bevor sie es selbst wissen.',
-    aboutStory3: 'Mein Hintergrund? **Niederländische Gründlichkeit** kombiniert mit **internationaler Erfahrung**. Vier Sprachen, jahrelange Erfahrung und vor allem: **Aufmerksamkeit für Details**, die andere übersehen.',
+    aboutStory3: 'Mein Hintergrund? **Hochwertige niederländische Professionalität** kombiniert mit **internationaler Erfahrung**. Vier Sprachen, jahrelange Erfahrung und vor allem: **Aufmerksamkeit für Details**, die andere übersehen.',
     aboutNetwork: 'Ich arbeite mit einem **kleinen, zuverlässigen Netzwerk** von Fachkräften. Menschen, die wie ich an **Qualität vor Quantität** glauben. Zusammen sorgen wir dafür, dass jedes Projekt **nahtlos läuft**.',
     aboutCollaboration: 'Ob es eine **Familiengathering** oder ein **Business-Event** ist, ich sorge dafür, dass alles **perfekt organisiert** ist. Von der ersten Planung bis zu den letzten Gläsern, die abgeräumt werden.',
     
