@@ -118,8 +118,6 @@ export const translations = {
     // Footer
     footerDescription: 'Premium hospitality services in Limburg en omgeving. Uw vertrouwde partner voor onvergetelijke evenementen.',
     navigation: 'Navigatie',
-    services: 'Diensten',
-    contact: 'Contact',
     copyright: 'Alle rechten voorbehouden.',
     privacyPolicy: 'Privacyverklaring',
     termsConditions: 'Algemene Voorwaarden',
@@ -131,7 +129,6 @@ export const translations = {
     home: 'Home',
     about: 'About Me',
     services: 'Services',
-    contact: 'Contact',
     faq: 'FAQ',
     
     // Hero
@@ -213,8 +210,6 @@ export const translations = {
     // Footer
     footerDescription: 'Premium hospitality services in Limburg and surroundings. Your trusted partner for unforgettable events.',
     navigation: 'Navigation',
-    services: 'Services',
-    contact: 'Contact',
     copyright: 'All rights reserved.',
     privacyPolicy: 'Privacy Policy',
     termsConditions: 'Terms & Conditions',
@@ -226,7 +221,6 @@ export const translations = {
     home: 'Startseite',
     about: 'Über Mich',
     services: 'Dienstleistungen',
-    contact: 'Kontakt',
     faq: 'FAQ',
     
     // Hero
@@ -308,8 +302,6 @@ export const translations = {
     // Footer
     footerDescription: 'Premium-Gastronomiedienstleistungen in Limburg und Umgebung. Ihr vertrauensvoller Partner für unvergessliche Events.',
     navigation: 'Navigation',
-    services: 'Dienstleistungen',
-    contact: 'Kontakt',
     copyright: 'Alle Rechte vorbehalten.',
     privacyPolicy: 'Datenschutzerklärung',
     termsConditions: 'Allgemeine Geschäftsbedingungen',

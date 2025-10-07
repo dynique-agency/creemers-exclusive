@@ -48,7 +48,7 @@ export default function Header() {
     { name: translations[language].home, href: '#home' },
     { name: translations[language].about, href: '#about' },
     { name: translations[language].services, href: '#services' },
-    { name: translations[language].contact, href: '#contact' }
+    { name: 'Contact', href: '#contact' }
   ]
 
   return (
@@ -186,15 +186,15 @@ export default function Header() {
                     </span>
                   </div>
                   <div className="grid grid-cols-1 gap-2 px-4">
-                    {languages.map((language) => (
+                    {languages.map((lang) => (
                       <button
-                        key={language.code}
+                        key={lang.code}
                         onClick={() => {
-                          setLanguage(language.code as 'nl' | 'en' | 'de')
+                          setLanguage(lang.code as 'nl' | 'en' | 'de')
                           setIsMenuOpen(false)
                         }}
                         className={`text-left px-3 py-2 text-sm rounded transition-colors duration-200 ${
-                          language === language.code
+                          language === lang.code
                             ? isOverHero
                               ? 'bg-creemers-gray-700 text-creemers-white'
                               : 'bg-creemers-gray-100 text-creemers-black'
@@ -203,7 +203,7 @@ export default function Header() {
                               : 'text-creemers-gray-700 hover:text-creemers-black hover:bg-creemers-gray-50'
                         }`}
                       >
-                        {language.name}
+                        {lang.name}
                       </button>
                     ))}
                   </div>

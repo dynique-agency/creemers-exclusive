@@ -80,7 +80,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="#contact" className="text-creemers-gray-300 hover:text-creemers-white transition-colors duration-300">
-                    {t.contact}
+                    Contact
                   </Link>
                 </li>
                 <li>
@@ -114,7 +114,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">{t.contact}</h4>
+              <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Contact</h4>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center space-x-3">
                   <MapPin size={16} className="text-creemers-gray-400 flex-shrink-0" />
