@@ -49,7 +49,7 @@ export const translations = {
     aboutSubtitle: 'Waar gastvrijheid een kunst wordt en elke ontmoeting een herinnering',
     aboutStoryTitle: 'Mijn verhaal',
     aboutStory1: 'Ik ben **Tom Creemers** en ik heb één passie: **gastvrijheid die raakt**. Niet de standaard service, maar die momenten waarop gasten voelen dat alles precies klopt.',
-    aboutStory2: '**Bijna de helft van mijn leven** werk ik in de horeca. Van kleine restaurants tot grote evenementen. Ik heb geleerd dat het draait om **anticiperen op wat gasten nodig hebben**, voordat ze het zelf weten.',
+    aboutStory2: '**Bijna de helft van mijn leven** werk ik in de horeca. Van kleine restaurants tot grote evenementen. Ik heb geleerd dat het draait om **anticiperen op hetgeen gasten nodig hebben**, voordat ze het zelf weten.',
     aboutStory3: 'Mijn achtergrond? **Nederlandse grondigheid** gecombineerd met **internationale ervaring**. Vier talen, jarenlange ervaring, en vooral: **oog voor detail** waar anderen overheen kijken.',
     aboutNetwork: 'Ik werk met een **klein, betrouwbaar netwerk** van professionals. Mensen die net als ik geloven in **kwaliteit boven kwantiteit**. Samen zorgen we ervoor dat elk project **naadloos verloopt**.',
     aboutCollaboration: 'Of het nu een **familiebijeenkomst** is of een **zakelijk evenement**, ik zorg ervoor dat alles **perfect geregeld** is. Van de eerste planning tot de laatste glazen die worden afgeruimd.',
