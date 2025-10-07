@@ -5,7 +5,7 @@ const nextConfig = {
   },
   output: 'export',
   trailingSlash: true,
-  distDir: 'out',
+  // Remove distDir for development, it will be set during build
 }
 
 module.exports = nextConfig

@@ -6,6 +6,7 @@ import ServicesSection from '@/components/ServicesSection'
 import FAQSection from '@/components/FAQSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
+import ChatButton from '@/components/ChatButton'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ContactSection />
       <FAQSection />
       <Footer />
+      <ChatButton />
     </main>
   )
 }

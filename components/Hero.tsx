@@ -35,6 +35,15 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Auto-advance slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000) // Change slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
@@ -162,18 +171,18 @@ export default function Hero() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 lg:left-8 top-1/2 transform -translate-y-1/2 z-20 p-4 bg-black/30 backdrop-blur-sm border border-white/30 text-white hover:bg-black/50 hover:border-white/50 transition-all duration-300"
+        className="absolute left-2 sm:left-4 lg:left-8 top-1/2 transform -translate-y-1/2 z-20 p-2 sm:p-3 lg:p-4 bg-black/30 backdrop-blur-sm border border-white/30 text-white hover:bg-black/50 hover:border-white/50 transition-all duration-300"
         aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={16} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-20 p-4 bg-black/30 backdrop-blur-sm border border-white/30 text-white hover:bg-black/50 hover:border-white/50 transition-all duration-300"
+        className="absolute right-2 sm:right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-20 p-2 sm:p-3 lg:p-4 bg-black/30 backdrop-blur-sm border border-white/30 text-white hover:bg-black/50 hover:border-white/50 transition-all duration-300"
         aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={16} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
       </button>
 
       {/* Scroll Indicator */}

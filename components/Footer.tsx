@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container-custom">
         {/* Main Footer Content */}
         <div className="py-12 sm:py-16 border-b border-creemers-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Company Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -91,27 +91,12 @@ export default function Footer() {
               </ul>
             </motion.div>
 
-            {/* Services */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">{t.services}</h4>
-              <ul className="space-y-2 sm:space-y-3">
-                <li className="text-sm sm:text-base text-creemers-gray-300">Fine Dining Service</li>
-                <li className="text-sm sm:text-base text-creemers-gray-300">Gespecialiseerde Bar Service</li>
-                <li className="text-sm sm:text-base text-creemers-gray-300">Evenementenmanagement</li>
-                <li className="text-sm sm:text-base text-creemers-gray-300">VIP Service</li>
-              </ul>
-            </motion.div>
 
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Contact</h4>
@@ -166,6 +151,25 @@ export default function Footer() {
               className="text-creemers-gray-400 text-sm"
             >
               © {currentYear} Creemers Exclusive. {t.copyright}
+            </motion.div>
+
+            {/* Development Credit */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-creemers-gray-400 text-xs sm:text-sm"
+            >
+              Website designed & developed by{' '}
+              <a 
+                href="https://dynique.nl" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-creemers-gray-300 hover:text-creemers-white transition-colors duration-300 underline"
+              >
+                dynique.nl
+              </a>
             </motion.div>
 
             {/* Legal Links */}

@@ -19,8 +19,9 @@ export default function CreateSection() {
           className="w-full h-full bg-fixed bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/resources/contactbackground2.png)',
-            backgroundSize: 'cover',
-            opacity: 0.6,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center',
+            opacity: 0.7,
             filter: 'blur(0px)'
           }}
         />

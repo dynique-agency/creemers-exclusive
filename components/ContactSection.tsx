@@ -237,7 +237,8 @@ Graag hoor ik van je!`
           style={{
             backgroundImage: 'url(/resources/contactbackground.png)',
             backgroundSize: 'contain',
-            opacity: 0.7,
+            backgroundPosition: 'left center',
+            opacity: 0.8,
             filter: 'blur(0px)'
           }}
         />
@@ -246,7 +247,7 @@ Graag hoor ik van je!`
           style={{
             backgroundImage: 'url(/resources/contactbackground2.png)',
             backgroundSize: 'contain',
-            opacity: 0.7,
+            opacity: 0.8,
             filter: 'blur(0px)',
             backgroundPosition: 'right center'
           }}
@@ -257,15 +258,15 @@ Graag hoor ik van je!`
       <div className="container-custom relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-20"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="inline-flex items-center space-x-2 bg-creemers-white/10 px-4 py-2 rounded-full mb-6"
           >
             <Zap size={16} className="text-creemers-white" />

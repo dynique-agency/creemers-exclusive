@@ -8,39 +8,27 @@ import { useLanguage, translations } from '@/contexts/LanguageContext'
 const getServices = (t: any, language: string) => [
   {
     icon: Utensils,
-    title: t.fineDiningTitle,
-    shortDesc: t.fineDiningShort,
-    description: t.fineDiningDesc,
-    features: language === 'nl' ? ['Wijnservice', 'Tafelopmaak', 'Menu-expertise', 'Gastcommunicatie'] : 
-             language === 'en' ? ['Wine Service', 'Table Setup', 'Menu Expertise', 'Guest Communication'] :
-             ['Weinservice', 'Tischdekoration', 'Menü-Expertise', 'Gästekommunikation']
+    title: t.restaurantService,
+    shortDesc: t.restaurantServiceShort,
+    description: t.restaurantServiceDesc
   },
   {
     icon: Wine,
-    title: t.premiumBarTitle,
-    shortDesc: t.premiumBarShort,
-    description: t.premiumBarDesc,
-    features: language === 'nl' ? ['Cocktail bereiding', 'Wijn selectie', 'Bar management', 'Guest interaction'] :
-             language === 'en' ? ['Cocktail Preparation', 'Wine Selection', 'Bar Management', 'Guest Interaction'] :
-             ['Cocktail-Zubereitung', 'Weinauswahl', 'Bar-Management', 'Gästeinteraktion']
+    title: t.barService,
+    shortDesc: t.barServiceShort,
+    description: t.barServiceDesc
   },
   {
     icon: Users2,
-    title: t.eventHospitalityTitle,
-    shortDesc: t.eventHospitalityShort,
-    description: t.eventHospitalityDesc,
-    features: language === 'nl' ? ['Event planning', 'Staff coordination', 'Guest management', 'Quality control'] :
-             language === 'en' ? ['Event Planning', 'Staff Coordination', 'Guest Management', 'Quality Control'] :
-             ['Event-Planung', 'Personal-Koordination', 'Gästemanagement', 'Qualitätskontrolle']
+    title: t.eventService,
+    shortDesc: t.eventServiceShort,
+    description: t.eventServiceDesc
   },
   {
     icon: Star,
-    title: t.luxuryServiceTitle,
-    shortDesc: t.luxuryServiceShort,
-    description: t.luxuryServiceDesc,
-    features: language === 'nl' ? ['Personalized service', 'Discretion', 'Anticipation', 'Excellence'] :
-             language === 'en' ? ['Personalized Service', 'Discretion', 'Anticipation', 'Excellence'] :
-             ['Personalisierter Service', 'Diskretion', 'Antizipation', 'Exzellenz']
+    title: t.cateringService,
+    shortDesc: t.cateringServiceShort,
+    description: t.cateringServiceDesc
   }
 ]
 
@@ -63,9 +51,8 @@ export default function ServicesSection() {
     return services.map((service, index) => ({
       ...service,
       id: index,
-      priority: service.features.length,
       complexity: service.description.length > 100 ? 'high' : 'medium',
-      category: service.title.includes('Dining') || service.title.includes('Bar') ? 'culinary' : 'service'
+      category: service.title.includes('Service') ? 'culinary' : 'service'
     }))
   }, [])
 
@@ -104,16 +91,16 @@ export default function ServicesSection() {
       <div className="container-custom">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <motion.h2 
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-creemers-black mb-4 sm:mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
             Mijn Diensten
           </motion.h2>
@@ -121,14 +108,14 @@ export default function ServicesSection() {
             className="w-16 sm:w-24 h-px bg-creemers-black mx-auto mb-4 sm:mb-6"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             style={{ originX: 0 }}
           />
           <motion.p 
             className="text-base sm:text-lg text-creemers-gray-600 max-w-2xl mx-auto px-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           >
             Gespecialiseerde horeca diensten voor veeleisende klanten
           </motion.p>
@@ -141,9 +128,9 @@ export default function ServicesSection() {
               key={service.id}
               ref={(el) => { serviceRefs.current[index] = el }}
               data-index={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
               className={`border transition-all duration-300 relative overflow-hidden ${
                 hoveredService === index 
                   ? 'border-creemers-black shadow-lg shadow-creemers-gray-200/50' 
@@ -229,10 +216,6 @@ export default function ServicesSection() {
                        transition={{ duration: 0.5, delay: index * 0.1 + 0.1 }}
                      >
                        {service.shortDesc}
-                       {/* Priority indicator */}
-                       <span className="ml-2 text-xs text-creemers-gray-500">
-                         ({service.priority} features)
-                       </span>
                      </motion.p>
                     </div>
                 </div>
@@ -262,37 +245,9 @@ export default function ServicesSection() {
                   )}
                   
                   <div className="pt-6">
-                    <p className="text-creemers-gray-700 leading-relaxed mb-6">
+                    <p className="text-creemers-gray-700 leading-relaxed">
                       {service.description}
                     </p>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      {service.features.map((feature, featureIndex) => (
-                        <motion.div 
-                          key={featureIndex} 
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
-                          className="flex items-center group cursor-pointer"
-                          title={`Feature ${featureIndex + 1} of ${service.features.length}`}
-                        >
-                          <motion.div 
-                            className="w-1.5 h-1.5 bg-creemers-black rounded-full mr-3 group-hover:scale-125 transition-transform duration-200"
-                            whileHover={{ scale: 1.25 }}
-                          ></motion.div>
-                          <span className="text-sm text-creemers-gray-700 group-hover:text-creemers-black transition-colors duration-200">{feature}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-                    
-                    {/* Performance metrics */}
-                    <div className="mt-6 pt-4 border-t border-creemers-gray-100">
-                      <div className="flex items-center justify-between text-xs text-creemers-gray-500">
-                        <span>Complexity: {service.complexity}</span>
-                        <span>Category: {service.category}</span>
-                        <span>Features: {service.priority}</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </motion.div>

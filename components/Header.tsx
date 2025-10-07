@@ -134,8 +134,18 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          {/* Mobile Header with Logo */}
+          <div className="lg:hidden flex items-center justify-between w-full">
+            {/* Mobile Logo */}
+            <div className="flex-1 text-center">
+              <h1 className={`text-lg font-light tracking-wider ${
+                isOverHero ? 'text-creemers-white' : 'text-creemers-black'
+              }`}>
+                Creemers <span className="text-sm tracking-widest">EXCLUSIVE</span>
+              </h1>
+            </div>
+            
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 transition-colors duration-300 ${

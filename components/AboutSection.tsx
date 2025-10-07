@@ -38,10 +38,10 @@ export default function AboutSection() {
       <div className="container-custom">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="text-center mb-20"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-creemers-black mb-4 sm:mb-6 tracking-wide">
@@ -57,10 +57,10 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16 lg:mb-20">
           {/* Story Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-50px" }}
             className="space-y-8"
           >
             <div>
@@ -69,65 +69,41 @@ export default function AboutSection() {
               </h3>
               
               <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-creemers-gray-700 leading-relaxed">
-                <p>
-                  {language === 'nl' ? (
-                    <>
-                      <span className="font-bold text-creemers-black">Het begon met een simpele overtuiging:</span> 
-                      elke gast verdient een ervaring die hen laat voelen dat ze de enige zijn die telt.
-                    </>
-                  ) : language === 'en' ? (
-                    <>
-                      <span className="font-bold text-creemers-black">It started with a simple conviction:</span> 
-                      every guest deserves an experience that makes them feel like they are the only ones that matter.
-                    </>
-                  ) : (
-                    <>
-                      <span className="font-bold text-creemers-black">Es begann mit einer einfachen Überzeugung:</span> 
-                      jeder Gast verdient eine Erfahrung, die ihn das Gefühl vermittelt, als wäre er der Einzige, der zählt.
-                    </>
-                  )}
-                </p>
+                <p dangerouslySetInnerHTML={{ 
+                  __html: t.aboutStory1.replace(/\*\*(.*?)\*\*/g, '<span class="font-medium text-creemers-gray-800">$1</span>')
+                }} />
                 
-                <p>
-                  {t.aboutStory2}
-                </p>
+                <p dangerouslySetInnerHTML={{ 
+                  __html: t.aboutStory2.replace(/\*\*(.*?)\*\*/g, '<span class="font-medium text-creemers-gray-800">$1</span>')
+                }} />
                 
-                <p>
-                  {language === 'nl' ? (
-                    <>
-                      <span className="font-bold text-creemers-black">Mijn kracht?</span> 
-                      De unieke combinatie van <span className="italic">Nederlandse precisie</span> en 
-                      <span className="font-medium"> internationale flair</span>. 
-                      Vloeiend in vier talen, begrijp ik niet alleen wat gasten zeggen, maar vooral wat ze niet zeggen.
-                    </>
-                  ) : language === 'en' ? (
-                    <>
-                      <span className="font-bold text-creemers-black">My strength?</span> 
-                      The unique combination of <span className="italic">Dutch precision</span> and 
-                      <span className="font-medium"> international flair</span>. 
-                      Fluent in four languages, I understand not only what guests say, but especially what they don't say.
-                    </>
-                  ) : (
-                    <>
-                      <span className="font-bold text-creemers-black">Meine Stärke?</span> 
-                      Die einzigartige Kombination aus <span className="italic">niederländischer Präzision</span> und 
-                      <span className="font-medium"> internationalem Flair</span>. 
-                      Fließend in vier Sprachen verstehe ich nicht nur, was Gäste sagen, sondern besonders, was sie nicht sagen.
-                    </>
-                  )}
-                </p>
+                <p dangerouslySetInnerHTML={{ 
+                  __html: t.aboutStory3.replace(/\*\*(.*?)\*\*/g, '<span class="font-medium text-creemers-gray-800">$1</span>')
+                }} />
+
+                {/* Network Section */}
+                <div className="mt-8 p-6 bg-creemers-gray-50 rounded-lg border-l-4 border-creemers-black">
+                  <p className="text-base sm:text-lg text-creemers-gray-700 leading-relaxed mb-4" dangerouslySetInnerHTML={{ 
+                    __html: t.aboutNetwork.replace(/\*\*(.*?)\*\*/g, '<span class="font-medium text-creemers-gray-800">$1</span>')
+                  }} />
+                  
+                  <p className="text-base sm:text-lg text-creemers-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ 
+                    __html: t.aboutCollaboration.replace(/\*\*(.*?)\*\*/g, '<span class="font-medium text-creemers-gray-800">$1</span>')
+                  }} />
+                </div>
               </div>
             </div>
 
             {/* Key Differentiators */}
             <div className="space-y-4">
-              <h4 className="text-xl font-medium text-creemers-black mb-4">{t.whatDistinguishesMe}</h4>
+              <h4 className="text-xl font-medium text-creemers-black mb-4">{t.whatDistinguishesUs}</h4>
               <div className="space-y-3">
                 {[
+                  "Een <span className='font-bold'>uitgebreid netwerk</span> van top ZZP'ers en specialisten",
                   "Anticiperen op behoeften <span className='italic'>voordat</span> ze uitgesproken worden",
                   "Naadloze communicatie in <span className='font-bold'>4 talen</span>",
                   "Aandacht voor de <span className='italic'>kleinste details</span> die het verschil maken",
-                  "Passie voor het creëren van <span className='font-medium'>onvergetelijke momenten</span>"
+                  "Een <span className='font-bold'>persoonlijke benadering</span> die verder gaat dan service"
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -147,10 +123,10 @@ export default function AboutSection() {
 
           {/* Visual Element */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-50px" }}
             className="relative"
           >
             <div className="aspect-[4/5] bg-creemers-gray-100 border border-creemers-gray-300 relative overflow-hidden">
@@ -191,19 +167,19 @@ export default function AboutSection() {
 
         {/* Achievements Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 lg:mb-20"
         >
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-30px" }}
               className="text-center p-6 border border-creemers-gray-200 hover:border-creemers-black transition-all duration-300 group"
             >
               <achievement.icon 
@@ -237,9 +213,10 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h3 className="text-sm md:text-base font-extralight text-creemers-gray-600 tracking-[0.3em] uppercase mb-4">
-              Vertrouwd door
+            <h3 className="text-sm md:text-base font-extralight text-creemers-gray-600 tracking-[0.3em] uppercase mb-2">
+              Werkzaam geweest bij
             </h3>
+            <p className="text-sm text-creemers-gray-500 mb-4">Toonaangevende hotels en restaurants</p>
             <div className="w-16 h-px bg-creemers-black mx-auto"></div>
           </motion.div>
 
