@@ -129,19 +129,22 @@ export default function AboutSection() {
             viewport={{ once: true, margin: "-50px" }}
             className="relative"
           >
-            <div className="aspect-[4/5] bg-creemers-gray-100 border border-creemers-gray-300 relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-creemers-black rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <Users size={48} className="text-creemers-white" />
-                  </div>
-                  <h4 className="text-2xl font-light text-creemers-black mb-2 tracking-wide">
-                    Tom Creemers
-                  </h4>
-                  <p className="text-creemers-gray-600 font-light tracking-wide">
-                    Hospitality Excellence
-                  </p>
-                </div>
+            <div className="aspect-[4/5] relative overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="/resources/IMG_7929.JPG"
+                alt="Tom Creemers - Hospitality Professional"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              
+              {/* Overlay Text */}
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <h4 className="text-2xl font-light mb-1 tracking-wide">
+                  Tom Creemers
+                </h4>
+                <p className="text-white/90 font-light tracking-wide text-sm">
+                  Hospitality Excellence
+                </p>
               </div>
             </div>
             
