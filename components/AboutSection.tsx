@@ -129,11 +129,11 @@ export default function AboutSection() {
             viewport={{ once: true, margin: "-50px" }}
             className="relative"
           >
-            <div className="aspect-[4/5] relative overflow-hidden rounded-lg shadow-lg">
+            <div className="relative overflow-hidden rounded-lg shadow-lg">
               <img
                 src="/resources/IMG_7929.JPG"
                 alt="Tom Creemers - Hospitality Professional"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               
